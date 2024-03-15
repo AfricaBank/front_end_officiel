@@ -32,7 +32,8 @@ export const radii = {
     full: '9999px', 
 }
 
-export const breakpointsInPx = {
+
+export const breakpoints = {
     base: '0px',
     sm: '480px',
     md: '768px',
