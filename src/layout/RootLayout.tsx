@@ -1,5 +1,6 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-//import { icons } from "../customTheme/iconStyle";
+import { SidebarMenu } from "../Components/SidebarMenu";
+import { Outlet } from "react-router-dom";
 export const RootLayout = () => {
   return (
     <Grid
@@ -17,10 +18,10 @@ export const RootLayout = () => {
         Navbar
       </GridItem>
       <GridItem pl="2" border="1px" borderColor="gray.500" area={"nav"}>
-        Sidebar
+        <SidebarMenu />
       </GridItem>
       <GridItem pl="2" border="1px" borderColor="gray.500" area={"main"}>
-        MainContent
+        <Outlet />
       </GridItem>
       <GridItem pl="2" border="1px" borderColor="gray.500" area={"footer"}>
         Footer
