@@ -1,8 +1,12 @@
-import { RootLayout } from "./layout/RootLayout";
+import ButtonRecherche from "./Components/reusableComponents/BouttonRecherche/ButtonRecherche";
+
+// import { RootLayout } from "./layout/RootLayout";
 const App = () => {
   return (
     <>
-      <RootLayout />
+      {/* <RootLayout /> */}
+      <ButtonRecherche/>
+      
     </>
   );
 };

@@ -12,6 +12,7 @@ export const colors = {
           700: '#2563EB80',
           800: '#2563EB90',
           900: '#2563EB',
+        
         },
         darkGrey: {
             0: '#6E7C7C',
