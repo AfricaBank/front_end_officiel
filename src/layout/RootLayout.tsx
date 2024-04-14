@@ -1,4 +1,5 @@
 import { Grid, GridItem } from "@chakra-ui/react";
+import TabeauGestionDeDossier from "../Components/TabeauGestionDeDossier.tsx";
 export const RootLayout = () => {
   return (
     <Grid
@@ -20,6 +21,7 @@ export const RootLayout = () => {
       </GridItem>
       <GridItem pl="2" border="1px" borderColor="gray.500" area={"main"}>
         MainContent
+          <TabeauGestionDeDossier/>
       </GridItem>
       <GridItem pl="2" border="1px" borderColor="gray.500" area={"footer"}>
         Footer
