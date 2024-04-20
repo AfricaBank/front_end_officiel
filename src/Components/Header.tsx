@@ -8,7 +8,7 @@ import {
 export const Header = () => {
   return (
     <>
-      <Grid templateColumns="repeat(5, 1fr)" p="6" gap={4}>
+      <Grid templateColumns="repeat(5, 1fr)" pt="3"gap={4}>
         <GridItem colSpan={2} h="10">
           <Flex
             as={CustomButton}
@@ -42,7 +42,7 @@ export const Header = () => {
                 />
               }
             />
-            <Text mt={2}>Connected user </Text>
+            <Text mt={2}>Username </Text>
             <CustomButton
               rightIcon={
                 <CustomIconButton
@@ -63,6 +63,8 @@ export const Header = () => {
               colorScheme={colors.primary.doggerBlueBlue[300]}
               bg={colors.primary.doggerBlueBlue[300]}
               variant="solid"
+              pl={10}
+              pr={10}
             >
               Déconnexion
             </CustomButton>
