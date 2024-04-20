@@ -5,8 +5,11 @@ export const colors = {
             0: '#D5EBFF',
           50: '#87CEFA',
           100: '#87CEEB',
+          101:'#99CCFF', //couleur arriere plan du sidebar 
+          102:'#1E90FF', //Menu active 
           200: '#00BFFF',
           300: '#1E90FF',
+
          
         },
         darkGrey: {
