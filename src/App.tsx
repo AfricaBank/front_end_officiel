@@ -1,4 +1,4 @@
-import ButtonRecherche from "./Components/reusableComponents/BouttonRecherche/ButtonRecherche";
+import ButtonRecherche from "./Components/reusableComponents/ButtonRecherche";
 
 // import { RootLayout } from "./layout/RootLayout";
 const App = () => {
