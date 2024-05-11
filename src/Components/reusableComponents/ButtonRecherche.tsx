@@ -1,8 +1,8 @@
-import { ButtonGroup, Icon } from "@chakra-ui/react";
-import { CustomButton } from "../CustomButton";
-import { AddIcon } from "@chakra-ui/icons";
-import { icons } from "../../../customTheme/iconStyle";
-import { colors } from "../../../customTheme/colorTheme";
+import {ButtonGroup, Icon} from "@chakra-ui/react";
+import {CustomButton} from "./CustomButton.tsx";
+import {AddIcon} from "@chakra-ui/icons";
+import {colors} from "../../customTheme/colorTheme.ts";
+import {icons} from "../../customTheme/iconStyle.ts";
 
 function ButtonRecherche() {
   return (
