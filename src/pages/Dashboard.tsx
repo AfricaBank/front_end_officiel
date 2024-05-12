@@ -1,3 +1,8 @@
+import { CustomCardDashboardStat } from "../Components/reusableComponents/CustomCardDashboardStat";
 export const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return (
+    <>
+      <CustomCardDashboardStat />
+    </>
+  );
 };
