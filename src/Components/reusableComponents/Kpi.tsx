@@ -2,6 +2,7 @@ import { Doughnut } from 'react-chartjs-2';
 import { Box, Flex, Text, Center, Card } from '@chakra-ui/react';
 import { Chart as ChartJS, Tooltip, Legend, ArcElement } from 'chart.js';
 import { barChartData } from "./data/FAKE_DATA.tsx";
+import KpiTache from './kpitache.tsx';
 
 ChartJS.register(
     Tooltip,
@@ -23,7 +24,7 @@ function Kpi({ title, count, percentageChange, data, bgColor, totalLabel }) {
     };
 
     return (
-        <Card width="30%" p={4} boxShadow="md">
+        <Card width="22%" p={4} boxShadow="md">
             <Flex alignItems="center">
                 <Box width="40%" position="relative">
                     <Doughnut options={options} data={data} />
@@ -53,7 +54,7 @@ function Dashboard() {
     return (
         <Box p={4} boxShadow="md" bg="white" borderRadius="md" m="20">
             <Text fontSize="xl" fontWeight="bold" mb={4}>Récapitulatif des dossiers</Text>
-            <Flex justifyContent="space-between" >
+            <Flex justifyContent="space-between" wrap="wrap">
                 <Kpi
                     title="Dossiers complets"
                     count="2574"
@@ -72,15 +73,26 @@ function Dashboard() {
                 />
                 <Kpi
                     title="Tâches actives"
-                    count="2574"
-                    percentageChange="-8%"
+                    count="100"
+                    percentageChange="+50%"
                     data={barChartData}
                     bgColor="red.400"
                     totalLabel="Tâches abandonnées"
                 />
+                <KpiTache
+                    title="Dossiers complets"
+                    count="2574"
+                    percentageChange="+50%"
+                    data={barChartData}
+                    bgColor="green.400"
+                    totalLabel="Total Dossiers"
+                />
+        
             </Flex>
         </Box>
     );
 }
 
 export default Dashboard;
+
+
