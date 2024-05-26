@@ -1,7 +1,6 @@
 import { Doughnut } from 'react-chartjs-2';
-import { Box, Flex, Text, Center, Card, Button, Checkbox } from '@chakra-ui/react';
+import { Box, Flex, Text, Center, Card, Button, Checkbox, Switch } from '@chakra-ui/react';
 import { Chart as ChartJS, Tooltip, Legend, ArcElement } from 'chart.js';
-import { barChartData } from "./data/FAKE_DATA.tsx";
 
 ChartJS.register(
     Tooltip,
@@ -9,7 +8,8 @@ ChartJS.register(
     ArcElement,
 );
 
-function KpiTache({ title, count, percentageChange, data, bgColor, totalLabel }) {
+
+function KpiTache({ data }) {
     const options = {
         plugins: {
             legend: {
@@ -31,11 +31,19 @@ function KpiTache({ title, count, percentageChange, data, bgColor, totalLabel })
                     </Center>
                 </Box>
                 <Box ml={4}>
-                    <Flex alignItems="center" mt={2}>
-                       <Checkbox as="span"></Checkbox>
-                    </Flex>
-                    <Flex alignItems="center" mt={2}>
-                       <Checkbox as="span"></Checkbox>
+                    <Flex direction="column" alignItems="flex-start">
+                        <Flex alignItems="center" mb={2}>
+                            <Switch colorScheme="blue" mr={2} />
+                            <Text>Dossiers</Text>
+                        </Flex>
+                        <Flex alignItems="center" mb={2}>
+                            <Switch colorScheme="orange" mr={2} />
+                            <Text>Taches</Text>
+                        </Flex>
+                        <Flex alignItems="center">
+                            <Switch colorScheme="teal" mr={2} />
+                            <Text>Nouveau dossier</Text>
+                        </Flex>
                     </Flex>
                 </Box>
             </Flex>
@@ -44,4 +52,3 @@ function KpiTache({ title, count, percentageChange, data, bgColor, totalLabel })
 }
 
 export default KpiTache
-
