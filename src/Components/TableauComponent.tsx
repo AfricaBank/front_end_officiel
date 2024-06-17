@@ -1,24 +1,53 @@
-import { Table, Thead, Tr, Th, Tbody, Tfoot, Box } from "@chakra-ui/react";
+import {
+  Table,
+  Thead,
+  Tr,
+  Th,
+  Tbody,
+  Tfoot,
+  Container,
+} from "@chakra-ui/react";
 const TableauComponent = () => {
   return (
     <>
-      <Box overflow-x="auto">
-        <Table size="sm">
+      <Container overflow="auto" border="1px" maxW="1200px">
+        <Table>
           <Thead>
-            <Tr>
-        
-            </Tr>
-          </Thead>
-          <Tbody></Tbody>
-          <Tfoot>
             <Tr>
               <Th>To convert</Th>
               <Th>into</Th>
-              <Th isNumeric>multiply by</Th>
+              <Th>multiply by</Th>
+              <Th>To convert</Th>
+              <Th>into</Th>
+              <Th>multiply by</Th>
+              <Th>To convert</Th>
+              <Th>into</Th>
+              <Th>multiply by</Th>
+              <Th>To convert</Th>
+              <Th>into</Th>
+              <Th>multiply by</Th>
+              <Th>To convert</Th>
+              <Th>into</Th>
+              <Th>multiply by</Th>
+              <Th>To convert</Th>
+              <Th>into</Th>
+              <Th>multiply by</Th>
+              <Th>multiply by</Th>
+              <Th>To convert</Th>
+              <Th>into</Th>
+              <Th>multiply by</Th>
+              <Th>To convert</Th>
+              <Th>into</Th>
+              <Th>multiply by</Th>
+              <Th>To convert</Th>
+              <Th>into</Th>
+              <Th>multiply by</Th>
             </Tr>
-          </Tfoot>
+          </Thead>
+          <Tbody></Tbody>
+          <Tfoot></Tfoot>
         </Table>
-      </Box>
+      </Container>
     </>
   );
 };
