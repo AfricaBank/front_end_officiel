@@ -1,6 +1,4 @@
-
 import {RootLayout} from "./layout/RootLayout.tsx";
-
 const App = () => {
   return (
 

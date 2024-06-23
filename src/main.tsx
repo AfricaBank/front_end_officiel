@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { fonts } from "./customTheme/policeStyle.ts";
 import {
@@ -17,6 +16,9 @@ import {Gestionroles} from "./pages/Gestionroles.tsx";
 import {Gestionagents} from "./pages/Gestionagents.tsx";
 import {Tachesactives} from "./pages/Tachesactives.tsx";
 import {Gestiondossiers} from "./pages/Gestiondossiers.tsx";
+import App from "./App.tsx";
+import { Dashboard } from "./pages/Dashboard.tsx";
+
 
 const theme = extendTheme({
   fonts,
