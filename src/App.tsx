@@ -1,10 +1,8 @@
-import { RootLayout } from "./layout/RootLayout";
-
+import {RootLayout} from "./layout/RootLayout.tsx";
 const App = () => {
   return (
-    <>
-      <RootLayout />
-    </>
+
+        <RootLayout />
   );
 };
 

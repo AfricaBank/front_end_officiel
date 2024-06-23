@@ -9,14 +9,16 @@ import {
 } from "./customTheme/customTypographie.ts";
 import { colors } from "./customTheme/colorTheme.ts";
 import { buttonTheme } from "./customTheme/buttonStyle.ts";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { GroupManagement } from "./pages/GroupManagement.tsx";
-import { RoleManagement } from "./pages/RoleManagement.tsx";
-import { AgentManagement } from "./pages/AgentManagement.tsx";
-import { ActiveTaskManagement } from "./pages/ActiveTaskManagement.tsx";
-import { BankingAccountManagement } from "./pages/BankingAccountManagement.tsx";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {Dashboard} from "./pages/Dashboard.tsx";
+import {Gestiongroupes} from "./pages/Gestiongroupes.tsx";
+import {Gestionroles} from "./pages/Gestionroles.tsx";
+import {Gestionagents} from "./pages/Gestionagents.tsx";
+import {Tachesactives} from "./pages/Tachesactives.tsx";
+import {Gestiondossiers} from "./pages/Gestiondossiers.tsx";
 import App from "./App.tsx";
 import { Dashboard } from "./pages/Dashboard.tsx";
+
 
 const theme = extendTheme({
   fonts,
@@ -28,7 +30,6 @@ const theme = extendTheme({
     Button: buttonTheme,
   },
 });
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,32 +41,31 @@ const router = createBrowserRouter([
       },
       {
         path: "groupes",
-        element: <GroupManagement />,
+        element: <Gestiongroupes />,
       },
       {
         path: "roles",
-        element: <RoleManagement />,
+        element: <Gestionroles />,
       },
       {
         path: "agents",
-        element: <AgentManagement />,
+        element: <Gestionagents />,
       },
       {
         path: "taches",
-        element: <ActiveTaskManagement />,
+        element: <Tachesactives />,
       },
       {
         path: "dossiers",
-        element: <BankingAccountManagement />,
+        element: <Gestiondossiers />,
       },
     ],
   },
 ]);
-
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ChakraProvider>
-  </React.StrictMode>
+    <React.StrictMode>
+      <ChakraProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ChakraProvider>
+    </React.StrictMode>
 );
