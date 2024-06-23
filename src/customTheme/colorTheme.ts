@@ -10,6 +10,7 @@ export const colors = {
           200: '#00BFFF',
           300: '#1E90FF',
 
+         
         },
         darkGrey: {
             0: '#E2E5E5',
