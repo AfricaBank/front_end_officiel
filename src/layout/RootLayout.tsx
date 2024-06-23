@@ -1,6 +1,7 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import {colors} from "../customTheme/colorTheme.ts";
 import Sidebar from "../Components/Sidebar.tsx";
+import {Outlet} from "react-router-dom";
 
 export const RootLayout = () => {
   return (
@@ -21,8 +22,8 @@ export const RootLayout = () => {
       <GridItem pl="2" border="1px" borderColor="gray.500" area={"nav"} background={colors.primary.doggerBlue["400"]}>
         <Sidebar />
       </GridItem>
-      <GridItem pl="2" border="1px" borderColor="gray.500" area={"main"}>
-        MainContent
+      <GridItem  pl="2" border="1px" borderColor="gray.500" area={"main"}>
+        <Outlet />
       </GridItem>
       <GridItem pl="2" border="1px" borderColor="gray.500" area={"footer"}>
         Footer
