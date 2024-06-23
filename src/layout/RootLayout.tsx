@@ -1,8 +1,8 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-import {colors} from "../customTheme/colorTheme.ts";
-import Sidebar from "../Components/Sidebar.tsx";
+import { SidebarMenu } from "../Components/SidebarMenu";
 import { Outlet } from "react-router-dom";
 import { Header } from "../Components/Header";
+import { colors } from "../customTheme/colorTheme";
 export const RootLayout = () => {
   return (
     <Grid
@@ -15,12 +15,17 @@ export const RootLayout = () => {
       gap="0.5"
       color="blackAlpha.700"
       fontWeight="bold"
-    > 
-      <GridItem pl="2" border="1px" borderColor="gray.500" area={"nav"} background={colors.primary.doggerBlue["400"]}>
-        <Sidebar />
-      </GridItem>
+    >
       <GridItem pl="2" area={"header"}>
         <Header />
+      </GridItem>
+      <GridItem
+        border="1px"
+        borderColor="gray.500"
+        area={"nav"}
+        bg={colors.primary.doggerBlueBlue[101]}
+      >
+        <SidebarMenu />
       </GridItem>
       <GridItem pl="2" border="1px" borderColor="gray.500" area={"main"}>
         <Outlet />
