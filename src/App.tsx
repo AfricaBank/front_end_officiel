@@ -1,9 +1,10 @@
-import { RootLayout } from "./layout/RootLayout";
+import GeneralInfo from "./Components/GeneralInfo/GeneralInfo";
+
 
 const App = () => {
   return (
     <>
-      <RootLayout />
+      <GeneralInfo />
     </>
   );
 };
