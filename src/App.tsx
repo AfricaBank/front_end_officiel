@@ -1,4 +1,5 @@
 import { RootLayout } from "./layout/RootLayout";
+
 const App = () => {
   return (
     <>

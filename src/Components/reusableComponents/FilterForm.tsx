@@ -1,7 +1,7 @@
 import { Box, Input, Button, Flex, Spacer } from '@chakra-ui/react';
 
-const Filtre = ({ onFilter }) => {
-    const handleSubmit = (event) => {
+const Filtre = ({  }) => {
+    const handleSubmit = (event: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
         event.preventDefault();
         const formData = new FormData(event.target);
         const filterData = {
@@ -10,7 +10,7 @@ const Filtre = ({ onFilter }) => {
             nom: formData.get('nom'),
             dateNaissance: formData.get('dateNaissance'),
         };
-        onFilter(filterData);
+        
     };
 
     return (
@@ -26,7 +26,7 @@ const Filtre = ({ onFilter }) => {
                 </Box>
                 <Spacer />
                 <Box height='100%' bg="#FFFFFF" width="40%" boxShadow="1px 1px 10px #000">
-                    <form onSubmit={handleSubmit}>
+                    <form>
                         <Box mb="4" >
                             <Flex marginBottom='100px' marginTop='10px'>
                                 <Input name="civilite" placeholder="Civilité" ml="2" mr="2"/>
@@ -36,8 +36,6 @@ const Filtre = ({ onFilter }) => {
                                 <Input name="nom" placeholder="Nom" ml="2" mr="2" />
                                 <Input type="date" name="dateNaissance" placeholder="Date de naissance" ml="2" mr="2" />
                             </Flex>
-                            {/*<Spacer />*/}
-                            {/*<Button colorScheme="teal" type="submit">Filtrer</Button>*/}
                         </Box>
                     </form>
                 </Box>
