@@ -61,7 +61,7 @@ const router = createBrowserRouter([
         element: <BankingAccountManagement />,
       },
       {
-        path: "dossiers/gestion",
+        path: "dossiers-gestion",
         element: <TableauGestionDeDossier />,
       },
       {

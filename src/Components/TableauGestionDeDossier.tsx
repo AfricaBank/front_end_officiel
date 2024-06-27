@@ -146,7 +146,6 @@ const Tableau = () => {
                                 top="666px"
                                 left="123.31px"
                                 borderRadius="10px"
-
                                 bg={colors.primary.doggerBlueBlue[200]}>
                                 <Th borderLeftRadius="10px" color="white" whiteSpace="nowrap">Prenom Nom ou Raison sociale</Th>
                                 <Th color="white" whiteSpace="nowrap">Numéro de dossier</Th>

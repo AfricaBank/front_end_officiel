@@ -1,3 +1,8 @@
+import TableauComponent from "../Components/TableauComponent";
 export const BankingAccountManagement = () => {
-  return <div>BankingAccountManagement</div>;
+  return (
+    <>
+      <TableauComponent />
+    </>
+  );
 };

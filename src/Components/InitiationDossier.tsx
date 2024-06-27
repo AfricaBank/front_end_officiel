@@ -1,5 +1,6 @@
 import React from 'react';
 import {colors} from "../customTheme/colorTheme.ts";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
   Box,
@@ -22,6 +23,10 @@ const InitiationDossier = () => {
     const dateString = today.toISOString().split('T')[0]; // YYYY-MM-DD format
     setCurrentDate(dateString);
   }, []);
+  const navigate = useNavigate();
+  const handleAbandoner = () => {
+    navigate('/dossiers-gestion');
+  };
   return (
     <Box>
     <Box h='50px' 
@@ -111,7 +116,7 @@ const InitiationDossier = () => {
 
             <HStack spacing={100} marginLeft={"25%"}>
             <Button bg={colors.primary.doggerBlueBlue[300]} color={"#ffff"}>Instruire le dossier</Button>
-            <Button colorScheme='red' variant='outline'>Abandonner</Button>
+            <Button colorScheme='red' variant='outline' onClick={handleAbandoner}>Abandonner</Button>
             </HStack>
           </VStack>
         </form>
