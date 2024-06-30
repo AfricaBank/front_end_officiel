@@ -10,13 +10,12 @@ import {
 import { colors } from "./customTheme/colorTheme.ts";
 import { buttonTheme } from "./customTheme/buttonStyle.ts";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { GroupManagement } from "./pages/GroupManagement.tsx";
-import { RoleManagement } from "./pages/RoleManagement.tsx";
-import { AgentManagement } from "./pages/AgentManagement.tsx";
-import { ActiveTaskManagement } from "./pages/ActiveTaskManagement.tsx";
-import { BankingAccountManagement } from "./pages/BankingAccountManagement.tsx";
+import { Gestionsgroupes } from "./pages/Gestiongroupes.tsx";
 import App from "./App.tsx";
 import { Dashboard } from "./pages/Dashboard.tsx";
+import { Gestionroles } from "./pages/Gestionroles.tsx";
+import { Tachesactives } from "./pages/Tachesactives.tsx";
+import { Gestiondossiers } from "./pages/Gestiondossiers.tsx";
 
 const theme = extendTheme({
   fonts,
@@ -40,23 +39,23 @@ const router = createBrowserRouter([
       },
       {
         path: "groupes",
-        element: <GroupManagement />,
+        element: <Gestionsgroupes />,
       },
       {
         path: "roles",
-        element: <RoleManagement />,
+        element: <Gestionroles />,
       },
       {
         path: "agents",
-        element: <AgentManagement />,
+        element: <Gestionroles />,
       },
       {
         path: "taches",
-        element: <ActiveTaskManagement />,
+        element: <Tachesactives />,
       },
       {
         path: "dossiers",
-        element: <BankingAccountManagement />,
+        element: <Gestiondossiers />,
       },
     ],
   },

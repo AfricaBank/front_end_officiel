@@ -1,10 +1,10 @@
-import {Box, Grid, GridItem} from "@chakra-ui/react";
+import {Grid, GridItem} from "@chakra-ui/react";
 import logo1 from "../assets/logo/logo1.png";
 import icondashboard from "../assets/icons/vector1.png";
 import tachesactives from "../assets/icons/vector5.png";
 import agent from "../assets/icons/vector4.png";
 import role from "../assets/icons/vector3.png";
-import groupe from "../assets/icons/vector2.png";
+import groupe from "../assets/icons/vector2.png"
 import dossier from "../assets/icons/vector6.png";
 import {Link} from "react-router-dom";
 import '../styles/sidebar.css';
@@ -29,11 +29,11 @@ const Sidebar = () => {
             fontWeight="bold"
             p={10}
         >
-            <Box >
+            <GridItem >
                 <Link to="/dashboard">
                 <img src={logo1} alt="Logo" width={170} height={40} />
                 </Link>
-            </Box>
+            </GridItem>
             <GridItem >
                 <Link to="/dashboard" className="navLinkHover" style={{ display: 'flex', alignItems: 'center' }}>
                     <img src={icondashboard} alt="Dashboard" style={{ marginRight: "10px" }}/>
