@@ -3,7 +3,6 @@ import {colors} from "../customTheme/colorTheme.ts";
 import Sidebar from "../Components/Sidebar.tsx";
 import { Outlet } from "react-router-dom";
 import { Header } from "../Components/Header";
-import { colors } from "../customTheme/colorTheme";
 export const RootLayout = () => {
   return (
     <Grid
