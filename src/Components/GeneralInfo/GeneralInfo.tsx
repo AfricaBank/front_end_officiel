@@ -10,6 +10,7 @@ const GeneralInfo: React.FC = () => {
             p={6}
             borderRadius="md"
             boxShadow="md"
+            mx={6} // Adding horizontal margins
         >
             <Flex mb={4}>
                 <Box
@@ -24,38 +25,38 @@ const GeneralInfo: React.FC = () => {
                 >
                     <Text fontSize="3xl">📄</Text>
                 </Box>
-                <Box ml={4}>
-                    <SimpleGrid columns={2} spacing={2}>
+                <Box ml={4} flex="1" border="1px" borderColor="blue.200" p={4} borderRadius="md">
+                    <SimpleGrid columns={4} spacingX={4} spacingY={2}>
                         <Box>
-                            <Text fontWeight="bold">Référence du dossier:</Text>
+                            <Text fontWeight="bold">Référence du dossier :</Text>
                             <Text>AB-EER-2024</Text>
                         </Box>
                         <Box>
-                            <Text fontWeight="bold">Type de personne:</Text>
+                            <Text fontWeight="bold">Type de personne :</Text>
                             <Text>Personne Physique</Text>
                         </Box>
                         <Box>
-                            <Text fontWeight="bold">Type de dossier:</Text>
-                            <Text>EER</Text>
-                        </Box>
-                        <Box>
-                            <Text fontWeight="bold">Responsable du dossier:</Text>
-                            <Text>Commercial 10</Text>
-                        </Box>
-                        <Box>
-                            <Text fontWeight="bold">Code exploitant:</Text>
+                            <Text fontWeight="bold">Code exploitant :</Text>
                             <Text>CC10</Text>
                         </Box>
                         <Box>
-                            <Text fontWeight="bold">Initiateur:</Text>
+                            <Text fontWeight="bold">Initiateur :</Text>
                             <Text>Commercial 10</Text>
                         </Box>
                         <Box>
-                            <Text fontWeight="bold">Statut:</Text>
+                            <Text fontWeight="bold">Type de dossier :</Text>
+                            <Text>EER</Text>
+                        </Box>
+                        <Box>
+                            <Text fontWeight="bold">Responsable du dossier :</Text>
+                            <Text>Commercial 10</Text>
+                        </Box>
+                        <Box>
+                            <Text fontWeight="bold">Statut :</Text>
                             <Text>Instruit</Text>
                         </Box>
                         <Box>
-                            <Text fontWeight="bold">Date de création:</Text>
+                            <Text fontWeight="bold">Date de création :</Text>
                             <Text>10/01/2024</Text>
                         </Box>
                     </SimpleGrid>
@@ -75,8 +76,8 @@ const GeneralInfo: React.FC = () => {
                     <Button leftIcon={<Icon as={FaFileExport} />} colorScheme="green">Exporter</Button>
                 </Flex>
             </Flex>
-            <Table variant="simple">
-                <Thead bg="blue.500">
+            <Table variant="striped" border="2px" borderColor="blue.300" borderRadius="md">
+                <Thead bg="blue.300">
                     <Tr>
                         <Th color="white">Civilité</Th>
                         <Th color="white">Nom de Famille</Th>
@@ -104,17 +105,20 @@ const GeneralInfo: React.FC = () => {
                         </Tr>
                     ))}
                 </Tbody>
+               
             </Table>
-            <Flex mt={4} justify="space-between">
-                <Button>Précédent</Button>
-                <Flex>
-                    <Button mr={2}>1</Button>
-                    <Button mr={2}>2</Button>
-                    <Button mr={2}>...</Button>
-                    <Button>20</Button>
+
+                <Flex mt={4} justify="space-between">
+                    <Button border="2px" borderColor="blue.300" borderRadius="md" colorScheme='blue'>Précédent</Button>
+                    <Flex>
+                        <Button mr={2}>1</Button>
+                        <Button mr={2}>2</Button>
+                        <Button mr={2}>...</Button>
+                        <Button>20</Button>
+                    </Flex>
+                    <Button border="2px" borderColor="blue.300" borderRadius="md" colorScheme='blue'>Suivant</Button>
                 </Flex>
-                <Button>Suivant</Button>
-            </Flex>
+            
         </Box>
     );
 };
