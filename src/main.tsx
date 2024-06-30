@@ -17,8 +17,6 @@ import {Gestionagents} from "./pages/Gestionagents.tsx";
 import {Tachesactives} from "./pages/Tachesactives.tsx";
 import {Gestiondossiers} from "./pages/Gestiondossiers.tsx";
 import App from "./App.tsx";
-import { Dashboard } from "./pages/Dashboard.tsx";
-
 
 const theme = extendTheme({
   fonts,
@@ -63,9 +61,9 @@ const router = createBrowserRouter([
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <React.StrictMode>
-      <ChakraProvider theme={theme}>
-        <RouterProvider router={router} />
-      </ChakraProvider>
-    </React.StrictMode>
+  <React.StrictMode>
+  <ChakraProvider theme={theme}>
+    <RouterProvider router={router} />
+  </ChakraProvider>
+  </React.StrictMode>
 );

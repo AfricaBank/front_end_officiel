@@ -16,11 +16,11 @@ export const RootLayout = () => {
       color="blackAlpha.700"
       fontWeight="bold"
     > 
-      <GridItem pl="2" border="1px" borderColor="gray.500" area={"nav"} background={colors.primary.doggerBlue["400"]}>
-        <Sidebar />
-      </GridItem>
-      <GridItem pl="2" area={"header"}>
+      <GridItem pl="2" border="1px" borderColor='black' area={"header"}>
         <Header />
+      </GridItem>
+      <GridItem pl="2" border="1px" borderColor="gray.500" area={"nav"} background={colors.primary.doggerBlueBlue["100"]}>
+        <Sidebar />
       </GridItem>
       <GridItem pl="2" border="1px" borderColor="gray.500" area={"main"}>
         <Outlet />
