@@ -29,11 +29,11 @@ const Sidebar = () => {
             fontWeight="bold"
             p={10}
         >
-            <GridItem >
+            <Box >
                 <Link to="/dashboard">
-                <img src={logo1} alt="Logo" width={160} height={40} />
+                <img src={logo1} alt="Logo" width={170} height={40} />
                 </Link>
-            </GridItem>
+            </Box>
             <GridItem >
                 <Link to="/dashboard" className="navLinkHover" style={{ display: 'flex', alignItems: 'center' }}>
                     <img src={icondashboard} alt="Dashboard" style={{ marginRight: "10px" }}/>
