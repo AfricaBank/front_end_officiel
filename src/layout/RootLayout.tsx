@@ -1,9 +1,9 @@
 import { Grid, GridItem, Box, Container } from "@chakra-ui/react";
-import { SidebarMenu } from "../Components/SidebarMenu";
 import { Outlet } from "react-router-dom";
 import { Header } from "../Components/Header";
 import { colors } from "../customTheme/colorTheme";
 import { Footer } from "../Components/Footer";
+import Sidebar from "../Components/Sidebar";
 import { breakpoints } from "../customTheme/customTypographie";
 export const RootLayout = () => {
   return (
@@ -11,8 +11,8 @@ export const RootLayout = () => {
       <Box w="full" ml="-30px">
         <Grid
           templateAreas={`"nav header"
-                "nav main"
-                "nav footer"`}
+                  "nav main"
+                  "nav footer"`}
           gridTemplateRows={"70px 1fr 50px"}
           gridTemplateColumns={"299px 1fr"}
           h="100vh"
@@ -25,7 +25,7 @@ export const RootLayout = () => {
             <Header />
           </GridItem>
           <GridItem area={"nav"} bg={colors.primary.doggerBlueBlue[101]}>
-            <SidebarMenu />
+            <Sidebar />
           </GridItem>
           <GridItem pl="2" border="1px" borderColor="gray.500" area={"main"}>
             <Outlet />
