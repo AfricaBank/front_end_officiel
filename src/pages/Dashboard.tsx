@@ -5,6 +5,7 @@ export const Dashboard = () => {
     <>
       <CustomCardDashboardStat />
       <NombreDossierParStatut />
+      <NombreDossierParStatut />
     </>
   );
 };

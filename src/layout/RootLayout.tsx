@@ -21,7 +21,17 @@ export const RootLayout = () => {
           fontWeight="bold"
           width="100%"
         >
-          <GridItem pl="2px" area={"header"}>
+          <GridItem
+            pl="2px"
+            area={"header"}
+            bg="white"
+            position="fixed"
+            top="0"
+            ml="300px"
+            zIndex="1"
+            height="70px"
+            width="auto"
+          >
             <Header />
           </GridItem>
           <GridItem area={"nav"} bg={colors.primary.doggerBlueBlue[101]}>

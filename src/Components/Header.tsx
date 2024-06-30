@@ -8,7 +8,7 @@ import {
 export const Header = () => {
   return (
     <>
-      <Grid templateColumns="repeat(5, 1fr)" pt="3"gap={4}>
+      <Grid templateColumns="repeat(5, 1fr)" pt="3" gap={4}>
         <GridItem colSpan={2} h="10">
           <Flex
             as={CustomButton}
