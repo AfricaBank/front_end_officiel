@@ -1,4 +1,4 @@
-import {Table, Thead, Input, Tbody, Tr, Th, Td, Box, IconButton, Flex, HStack, Button} from "@chakra-ui/react";
+import {Table, Thead, Input, Tbody, Tr, Th, Td, Box, IconButton, Flex, HStack, Button, Container} from "@chakra-ui/react";
 import {useState} from "react";
 import { icons } from'../customTheme/iconStyle.ts'
 import {colors} from "../customTheme/colorTheme.ts";
@@ -124,25 +124,33 @@ const Tableau = () => {
     const navigate = useNavigate();
 
     const handleInitiateDossier = () => {
-        navigate('/initiation-dossier');
+        navigate('/dossiers/initiation-dossier');
       };
 
     return (
         <Box>
             <Box >
                 {/* Formulaire de filtre */}
-
-                <FilterForm />
-                <Box mb={4}>
-                    <Button onClick={handleInitiateDossier} colorScheme="teal">
+                <Box mb={4}  paddingTop={2}>
+                    <Button onClick={handleInitiateDossier} colorScheme="teal" bg={colors.primary.doggerBlueBlue[200]}>
+                        <IconButton
+                            aria-label="Modifier"
+                            color='#FFFFF'
+                            size='sm'
+                            icon={<icons.google_plus_icon color={colors.primary.doggerBlueBlue[200]} fontSize="30px" paddingTop={2.5} paddingLeft={3}/>}
+                            //onClick={() => handleEdit(item)}
+                            mr={2}
+                        />
                         Initier un dossier
                     </Button>
                 </Box>
+                <FilterForm />
+                
             </Box>
-            <HStack overflow="auto">
+            <Container overflow="scroll" border="1px" maxW="1200px">
                     <Table variant="simple">
                         <Thead>
-                            <Tr height="62px"
+                            <Tr height="40px"
                                 top="666px"
                                 left="123.31px"
                                 borderRadius="10px"
@@ -160,8 +168,8 @@ const Tableau = () => {
                                 <Th color="white" whiteSpace="nowrap">Code Exploitant</Th>
                                 <Th borderRightRadius="10px" color="white">Actions</Th>
                             </Tr>
-                        </Thead>
-                        <Tbody overflowX={"scroll"}>
+                        </Thead>    
+                        <Tbody overflowX={"auto"}>
                             {filteredData.map((item, index) => (
                                 <Tr key={index}>
                                     <Td>{item.prenomNom}</Td>
@@ -181,7 +189,7 @@ const Tableau = () => {
                                                 aria-label="Modifier"
                                                 colorScheme='blue'
                                                 size='sm'
-                                                icon={<icons.edit_icons/>}
+                                                 icon={<icons.edit_icons/>}
                                                 //onClick={() => handleEdit(item)}
                                                 mr={2}
                                             />
@@ -206,7 +214,7 @@ const Tableau = () => {
                             ))}
                         </Tbody>
                     </Table>
-            </HStack>
+            </Container>
         </Box>
     );
 };
