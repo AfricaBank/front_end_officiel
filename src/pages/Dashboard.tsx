@@ -1,3 +1,11 @@
+import { CustomCardDashboardStat } from "../Components/reusableComponents/CustomCardDashboardStat";
+import { NombreDossierParStatut } from "../Components/reusableComponents/NombreDossierParStatut";
 export const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return (
+    <>
+      <CustomCardDashboardStat />
+      <NombreDossierParStatut />
+      <NombreDossierParStatut />
+    </>
+  );
 };

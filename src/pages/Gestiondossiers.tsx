@@ -1,3 +1,5 @@
+import TableauGestionDeDossier from "../Components/TableauGestionDeDossier";
+
 export const Gestiondossiers = () => { 
-    return <div>Gestion des dossiers</div>;
+    return <TableauGestionDeDossier/>;
 }
