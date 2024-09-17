@@ -16,7 +16,7 @@ import { Dashboard } from "./pages/Dashboard.tsx";
 import { Gestionroles } from "./pages/Gestionroles.tsx";
 import { Tachesactives } from "./pages/Tachesactives.tsx";
 import { Gestiondossiers } from "./pages/Gestiondossiers.tsx";
-import InitiationDossier from "./Components/InitiationDossier.tsx";
+import { GeneralInfo } from "./pages/GeneralInfo.tsx";
 
 const theme = extendTheme({
   fonts,
@@ -59,8 +59,8 @@ const router = createBrowserRouter([
         element: <Gestiondossiers />,
       },
       {
-        path: "dossiers/initiation-dossier",
-        element: <InitiationDossier />,
+        path: "infos",
+        element: <GeneralInfo />,
       },
     ],
   },

@@ -34,6 +34,7 @@ const Sidebar = () => {
           <img src={logo1} alt="Logo" width={170} height={40} />
         </Link>
       </GridItem>
+ 
       <GridItem>
         <Link
           to="/dashboard"
@@ -46,6 +47,21 @@ const Sidebar = () => {
             style={{ marginRight: "10px" }}
           />
           Dashboard
+        </Link>
+      </GridItem>
+
+      <GridItem>
+        <Link
+          to="/infos"
+          className="navLinkHover"
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <img
+            src={icondashboard}
+            alt="Dashboard"
+            style={{ marginRight: "10px" }}
+          />
+           Information Generale
         </Link>
       </GridItem>
       <GridItem>
@@ -119,6 +135,7 @@ const Sidebar = () => {
           Gestion des dossiers
         </Link>
       </GridItem>
+
     </Grid>
   );
 };
