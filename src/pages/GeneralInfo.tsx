@@ -14,24 +14,26 @@ import {
     Td,
     IconButton,
     Icon,
+    Tabs,
+    TabList,
+    TabPanels,
+    Tab,
+    TabPanel,
     useBreakpointValue
 } from '@chakra-ui/react';
 import { AddIcon, EditIcon, DeleteIcon, ViewIcon } from '@chakra-ui/icons';
 import { FaFileExport } from 'react-icons/fa';
 import { colors } from '../customTheme/colorTheme';
+import { icons } from '../customTheme/iconStyle';
 
-export const  GeneralInfo = () => {
+
+
+export const GeneralInfo = () => {
     // Use breakpoint value for responsive SimpleGrid columns
     const columns = useBreakpointValue({ base: 1, md: 2, lg: 4 });
 
     return (
-        <Box
-            bg="gray.100"
-            p={6}
-            borderRadius="md"
-            boxShadow="md"
-            mx={{ base: 2, md: 6 }}
-        >
+        <Box bg="gray.100" p={6} borderRadius="md" boxShadow="md" mx={{ base: 2, md: 6 }}>
             <Flex mb={4} direction={{ base: 'column', md: 'row' }}>
                 <Box
                     bg="blue.100"
@@ -84,61 +86,77 @@ export const  GeneralInfo = () => {
                 </Box>
             </Flex>
             <Divider />
-            <Flex mt={4} mb={4} wrap="wrap">
-                <Button mr={2} mb={2} colorScheme="blue">Titulaire</Button>
-                <Button mr={2} mb={2} colorScheme="blue">Co-Titulaire</Button>
-                <Button mr={2} mb={2} colorScheme="blue">Personnes liées physiques</Button>
-                <Button mr={2} mb={2} colorScheme="blue">Personnes liées morales</Button>
-            </Flex>
-            <Flex justify="space-between" mb={4} wrap="wrap">
-                <Button mb={2}>Précédent</Button>
-                <Flex mb={2}>
-                    <Button leftIcon={<AddIcon />} colorScheme="blue" mr={2}>Créer un Titulaire</Button>
-                    <Button leftIcon={<Icon as={FaFileExport} />} colorScheme="green">Exporter</Button>
-                </Flex>
-            </Flex>
-            <Box overflowX="auto">
-                <Table variant="striped" border="2px" borderColor={colors.primary.doggerBlueBlue[102]} borderRadius="md">
-                    <Thead bg={colors.primary.doggerBlueBlue[102]}>
-                        <Tr>
-                            <Th color="white">Civilité</Th>
-                            <Th color="white">Nom de Famille</Th>
-                            <Th color="white">Prénom</Th>
-                            <Th color="white">Date de naissance</Th>
-                            <Th color="white">Lieu de naissance</Th>
-                            <Th color="white">Numéro d'identité</Th>
-                            <Th color="white">Actions</Th>
-                        </Tr>
-                    </Thead>
-                    <Tbody>
-                        {[...Array(5)].map((_, index) => (
-                            <Tr key={index}>
-                                <Td>Monsieur</Td>
-                                <Td>CAMARA</Td>
-                                <Td>Ismael</Td>
-                                <Td>01/01/1999</Td>
-                                <Td>MOMBASSA</Td>
-                                <Td>012584785</Td>
-                                <Td>
-                                    <IconButton aria-label="View" icon={<ViewIcon />} mr={2} />
-                                    <IconButton aria-label="Edit" icon={<EditIcon />} mr={2} />
-                                    <IconButton aria-label="Delete" icon={<DeleteIcon />} colorScheme="red" />
-                                </Td>
-                            </Tr>
-                        ))}
-                    </Tbody>
-                </Table>
-            </Box>
-            <Flex mt={4} justify="space-between" wrap="wrap">
-                <Button mb={2} border="2px" borderColor="blue.300" borderRadius="md" colorScheme='blue'>Précédent</Button>
-                <Flex mb={2}>
-                    <Button mr={2}>1</Button>
-                    <Button mr={2}>2</Button>
-                    <Button mr={2}>...</Button>
-                    <Button>20</Button>
-                </Flex>
-                <Button mb={2} border="2px" borderColor="blue.300" borderRadius="md" colorScheme='blue'>Suivant</Button>
-            </Flex>
+
+            <Tabs variant="enclosed" align="center">
+                <TabList>
+                    <Tab>Titulaire</Tab>
+                    <Tab>Co-Titulaire</Tab>
+                    <Tab>Personnes liées physiques</Tab>
+                    <Tab>Personnes liées morales</Tab>
+                </TabList>
+                <TabPanels>
+                    <TabPanel>
+                        <Text>Content pour Titulaire</Text>
+                    </TabPanel>
+                    <TabPanel>
+                        <Flex justify="space-between" mb={4} wrap="wrap">
+                            <Button mb={2}>Précédent</Button>
+                            <Flex mb={2}>
+                                <Button leftIcon={<AddIcon />} colorScheme="blue" mr={2} variant='outline'>Créer un Titulaire</Button>
+                                <Button leftIcon={<Icon as={FaFileExport} />} colorScheme="green">Exporter</Button>
+                            </Flex>
+                        </Flex>
+                        <Box overflowX="auto">
+                            <Table variant="striped" border="2px" borderColor={colors.primary.doggerBlueBlue[102]} borderRadius="md">
+                                <Thead bg={colors.primary.doggerBlueBlue[102]}>
+                                    <Tr>
+                                        <Th color="white">Civilité</Th>
+                                        <Th color="white">Nom de Famille</Th>
+                                        <Th color="white">Prénom</Th>
+                                        <Th color="white">Date de naissance</Th>
+                                        <Th color="white">Lieu de naissance</Th>
+                                        <Th color="white">Numéro d'identité</Th>
+                                        <Th color="white">Actions</Th>
+                                    </Tr>
+                                </Thead>
+                                <Tbody>
+                                    {[...Array(5)].map((_, index) => (
+                                        <Tr key={index}>
+                                            <Td>Monsieur</Td>
+                                            <Td>CAMARA</Td>
+                                            <Td>Ismael</Td>
+                                            <Td>01/01/1999</Td>
+                                            <Td>MOMBASSA</Td>
+                                            <Td>012584785</Td>
+                                            <Td>
+                                                <IconButton aria-label="View" icon={<ViewIcon />} mr={2} />
+                                                <IconButton aria-label="Edit" icon={<EditIcon />} mr={2} />
+                                                <IconButton aria-label="Delete" icon={<DeleteIcon />} colorScheme="red" />
+                                            </Td>
+                                        </Tr>
+                                    ))}
+                                </Tbody>
+                            </Table>
+                        </Box>
+                        <Flex mt={4} justify="space-between" wrap="wrap">
+                            <Button mb={2} border="2px" borderColor={colors.primary.doggerBlueBlue[102]} borderRadius="md" colorScheme='blue'>Précédent</Button>
+                            <Flex mb={2}>
+                                <Button mr={2}>1</Button>
+                                <Button mr={2}>2</Button>
+                                <Button mr={2}>...</Button>
+                                <Button>20</Button>
+                            </Flex>
+                            <Button mb={2} border="2px" borderColor={colors.primary.doggerBlueBlue[102]} borderRadius="md" colorScheme='blue'>Suivant</Button>
+                        </Flex>
+                    </TabPanel>
+                    <TabPanel>
+                        <Text>Content pour Personnes liées physiques</Text>
+                    </TabPanel>
+                    <TabPanel>
+                        <Text>Content pour Personnes liées morales</Text>
+                    </TabPanel>
+                </TabPanels>
+            </Tabs>
         </Box>
     );
 };
