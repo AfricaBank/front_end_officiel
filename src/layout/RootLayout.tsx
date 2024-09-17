@@ -5,6 +5,7 @@ import { colors } from "../customTheme/colorTheme";
 import { Footer } from "../Components/Footer";
 import Sidebar from "../Components/Sidebar";
 import { breakpoints } from "../customTheme/customTypographie";
+import TableauGestionDeDossier from "../Components/TableauGestionDeDossier";
 export const RootLayout = () => {
   return (
     <Container centerContent maxW={breakpoints.xl} minW={breakpoints.lg}>

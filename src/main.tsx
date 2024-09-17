@@ -16,7 +16,7 @@ import { Dashboard } from "./pages/Dashboard.tsx";
 import { Gestionroles } from "./pages/Gestionroles.tsx";
 import { Tachesactives } from "./pages/Tachesactives.tsx";
 import { Gestiondossiers } from "./pages/Gestiondossiers.tsx";
-import { GeneralInfo  } from "./pages/GeneralInfo.tsx";
+import { GeneralInfo } from "./pages/GeneralInfo.tsx";
 
 const theme = extendTheme({
   fonts,
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: "infos",
-        element: <GeneralInfo/>,
+        element: <GeneralInfo />,
       },
     ],
   },
