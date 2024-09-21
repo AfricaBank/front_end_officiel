@@ -5,6 +5,7 @@ import {colors} from "../customTheme/colorTheme.ts";
 import FilterForm from "./reusableComponents/FilterForm.tsx";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import GeneralInfo from "./GeneralInfo.tsx";
 
 const data = [
     {
@@ -128,6 +129,9 @@ const Tableau = () => {
       };
 
     return (
+       <>
+         <GeneralInfo/>
+      
         <Box>
             <Box >
                 {/* Formulaire de filtre */}
@@ -216,6 +220,7 @@ const Tableau = () => {
                     </Table>
             </Container>
         </Box>
+        </>
     );
 };
 
