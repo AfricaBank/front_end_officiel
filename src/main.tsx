@@ -18,6 +18,18 @@ import { Tachesactives } from "./pages/Tachesactives.tsx";
 import { Gestiondossiers } from "./pages/Gestiondossiers.tsx";
 import InitiationDossier from "./Components/InitiationDossier.tsx";
 
+const baseStyle = {
+  // select the indicator part
+  indicator: {
+    // change the default border radius to 0
+    borderRadius: "50%",
+  },
+}
+
+const stepperThem={
+  baseStyle,
+}
+
 const theme = extendTheme({
   fonts,
   fontSize,
@@ -26,8 +38,12 @@ const theme = extendTheme({
   colors,
   components: {
     Button: buttonTheme,
+    Stepper:stepperThem,
   },
+ 
 });
+
+
 
 const router = createBrowserRouter([
   {
