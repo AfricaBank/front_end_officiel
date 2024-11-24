@@ -1,21 +1,32 @@
 // src/components/FieldSet.js
 import React from 'react';
-import { Box, VStack, Text, Divider } from '@chakra-ui/react';
+import { Box, Text, Flex } from '@chakra-ui/react';
 
 const FieldSet = ({ title, children }) => {
   return (
-    <Box border="1px" borderColor="gray.200" borderRadius="md" p={4} mb={4}>
+    <Box
+      border="1px"
+      borderColor="blue.300"
+      borderRadius="md"
+      p={4}
+      mb={4}
+      position="relative"
+    >
       {title && (
-        <VStack align="start" mb={4}>
-          <Text fontSize="lg" fontWeight="bold" color="gray.700">
-            {title}
-          </Text>
-          <Divider />
-        </VStack>
+        <Flex
+          position="absolute"
+          top="-10px"
+          left="16px"
+          backgroundColor="white"
+          px={2}
+          color="blue.500"
+          fontWeight="bold"
+          fontSize="sm"
+        >
+          {title}
+        </Flex>
       )}
-      <VStack spacing={4}>
-        {children}
-      </VStack>
+      <Box mt={2}>{children}</Box>
     </Box>
   );
 };
