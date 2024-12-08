@@ -14,7 +14,6 @@ export const StepperComponent = () => {
         borderRadius="15px"
         display="flex"
         pt="80px"
-        
       >
         <SingleStep />
       </Box>

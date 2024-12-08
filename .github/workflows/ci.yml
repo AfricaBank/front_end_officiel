@@ -16,7 +16,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t your-image-name:latest .
-        
+
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:

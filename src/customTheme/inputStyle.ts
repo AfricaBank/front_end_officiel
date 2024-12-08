@@ -1,3 +1,1 @@
-export const customInput ={
-    
-}
+export const customInput = {};

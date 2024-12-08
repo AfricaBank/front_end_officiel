@@ -13,7 +13,8 @@ export const DropDownListField: React.FC<CustomDropDownList> = ({
   return (
     <>
       {label && <label htmlFor="custom-select">{label}</label>}
-      <Select {...rest} id="custom-select" options={options} />
+      <Select {...rest} id="custom-select" options={options}
+      />
     </>
   );
 };

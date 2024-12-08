@@ -24,11 +24,11 @@ const baseStyle = {
     // change the default border radius to 0
     borderRadius: "50%",
   },
-}
+};
 
-const stepperThem={
+const stepperThem = {
   baseStyle,
-}
+};
 
 const theme = extendTheme({
   fonts,
@@ -38,12 +38,9 @@ const theme = extendTheme({
   colors,
   components: {
     Button: buttonTheme,
-    Stepper:stepperThem,
+    Stepper: stepperThem,
   },
- 
 });
-
-
 
 const router = createBrowserRouter([
   {
@@ -87,5 +84,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <ChakraProvider theme={theme}>
       <RouterProvider router={router} />
     </ChakraProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

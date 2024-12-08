@@ -130,7 +130,7 @@ const data = [
 const Tableau = () => {
   const [filterValue, setFilterValue] = useState("");
   const filteredData = data.filter((item) =>
-    item.prenomNom.toLowerCase().includes(filterValue.toLowerCase())
+    item.prenomNom.toLowerCase().includes(filterValue.toLowerCase()),
   );
   const handleFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFilterValue(event.target.value);
