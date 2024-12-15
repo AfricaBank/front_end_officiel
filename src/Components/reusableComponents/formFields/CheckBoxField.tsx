@@ -1,4 +1,7 @@
-import { Checkbox, CheckboxProps } from "@chakra-ui/react";
+
+import {CheckboxProps} from "../../ui/checkbox.tsx";
+import { Checkbox } from "@/components/ui/checkbox";
+
 
 interface CustomCheckboxProps extends CheckboxProps {
   label: string;

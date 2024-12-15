@@ -1,15 +1,15 @@
 import {
-  forwardRef,
   Button,
   ButtonProps,
   IconButton,
   IconButtonProps,
 } from "@chakra-ui/react";
+import {forwardRef} from "react";
 
 export const CustomButton = forwardRef<ButtonProps, "button">((props, ref) => (
-  <Button ref={ref} {...props} />
+  <Button />
 ));
 
 export const CustomIconButton = forwardRef<IconButtonProps, "button">(
-  (props, ref) => <IconButton ref={ref} {...props} />,
+  (props, ref) => <IconButton />,
 );

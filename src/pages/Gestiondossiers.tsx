@@ -1,5 +1,6 @@
-import TableauGestionDeDossier from "../Components/TableauGestionDeDossier";
+import {TableauGestionDossier} from "../Components/TableauGestionDeDossier.tsx";
+
 
 export const Gestiondossiers = () => {
-  return <TableauGestionDeDossier />;
+  return <TableauGestionDossier />;
 };

@@ -1,14 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { fonts } from "./customTheme/policeStyle.ts";
-import {
-  fontSize,
-  fontWeights,
-  lineHeights,
-} from "./customTheme/customTypographie.ts";
-import { colors } from "./customTheme/colorTheme.ts";
-import { buttonTheme } from "./customTheme/buttonStyle.ts";
+import {ChakraProvider } from "@chakra-ui/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Gestionsgroupes } from "./pages/Gestiongroupes.tsx";
 import App from "./App.tsx";
@@ -16,31 +8,7 @@ import { Dashboard } from "./pages/Dashboard.tsx";
 import { Gestionroles } from "./pages/Gestionroles.tsx";
 import { Tachesactives } from "./pages/Tachesactives.tsx";
 import { Gestiondossiers } from "./pages/Gestiondossiers.tsx";
-import InitiationDossier from "./Components/InitiationDossier.tsx";
-
-const baseStyle = {
-  // select the indicator part
-  indicator: {
-    // change the default border radius to 0
-    borderRadius: "50%",
-  },
-};
-
-const stepperThem = {
-  baseStyle,
-};
-
-const theme = extendTheme({
-  fonts,
-  fontSize,
-  fontWeights,
-  lineHeights,
-  colors,
-  components: {
-    Button: buttonTheme,
-    Stepper: stepperThem,
-  },
-});
+import {system} from "./theme.ts";
 
 const router = createBrowserRouter([
   {
@@ -71,17 +39,14 @@ const router = createBrowserRouter([
         path: "dossiers",
         element: <Gestiondossiers />,
       },
-      {
-        path: "dossiers/initiation-dossier",
-        element: <InitiationDossier />,
-      },
+
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
+    <ChakraProvider value={system}>
       <RouterProvider router={router} />
     </ChakraProvider>
   </React.StrictMode>,
