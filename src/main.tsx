@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Gestionsgroupes } from "./pages/Gestiongroupes.tsx";
 import App from "./App.tsx";
@@ -8,7 +8,7 @@ import { Dashboard } from "./pages/Dashboard.tsx";
 import { Gestionroles } from "./pages/Gestionroles.tsx";
 import { Tachesactives } from "./pages/Tachesactives.tsx";
 import { Gestiondossiers } from "./pages/Gestiondossiers.tsx";
-import {system} from "./theme.ts";
+import { system } from "./theme.ts";
 
 const router = createBrowserRouter([
   {
