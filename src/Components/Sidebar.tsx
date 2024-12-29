@@ -26,7 +26,7 @@ const Sidebar = () => {
       color="black" // Texte blanc
       alignItems="center"
       fontWeight="bold"
-      p={10}
+      padding={10}
       position="fixed"
     >
       <GridItem>

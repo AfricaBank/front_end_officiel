@@ -3,7 +3,7 @@ import { Box } from "@chakra-ui/react";
 
 const App = () => {
   return (
-    <Box m="0px" p="0px">
+    <Box margin="0" padding="0">
       <RootLayout />
     </Box>
   );

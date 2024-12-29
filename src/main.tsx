@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ChakraProvider } from "@chakra-ui/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Gestionsgroupes } from "./pages/Gestiongroupes.tsx";
 import App from "./App.tsx";
@@ -8,6 +7,8 @@ import { Dashboard } from "./pages/Dashboard.tsx";
 import { Gestionroles } from "./pages/Gestionroles.tsx";
 import { Tachesactives } from "./pages/Tachesactives.tsx";
 import { Gestiondossiers } from "./pages/Gestiondossiers.tsx";
+import { Provider } from "./Components/ui/provider.tsx";
+import { ChakraProvider, defaultSystem } from "@chakra-ui/react";
 import { system } from "./theme.ts";
 
 const router = createBrowserRouter([
@@ -39,7 +40,6 @@ const router = createBrowserRouter([
         path: "dossiers",
         element: <Gestiondossiers />,
       },
-
     ],
   },
 ]);
@@ -49,5 +49,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <ChakraProvider value={system}>
       <RouterProvider router={router} />
     </ChakraProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

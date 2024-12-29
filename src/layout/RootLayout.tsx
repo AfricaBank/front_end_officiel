@@ -7,14 +7,14 @@ import Sidebar from "../Components/Sidebar";
 
 export const RootLayout = () => {
   return (
-    <Box w="full" ml="-30px" m="0px" p="0px">
+    <Box width="full" margin="0px" padding="0px">
       <Grid
         templateAreas={`"nav header"
                         "nav main"
                         "nav footer"`}
         gridTemplateRows={"70px 1fr 50px"}
         gridTemplateColumns={"299px 1fr"}
-        h="100vh"
+        height="100vh"
         gap="0.5"
         color="blackAlpha.700"
         fontWeight="bold"
@@ -22,7 +22,7 @@ export const RootLayout = () => {
       >
         <GridItem
           area={"header"}
-          bg="white"
+          background="white"
           position="relative"
           top="0"
           zIndex="1"
@@ -32,18 +32,18 @@ export const RootLayout = () => {
         >
           <Header />
         </GridItem>
-        <GridItem area={"nav"} bg={colors.primary.doggerBlueBlue[101]}>
+        <GridItem area={"nav"} background={colors.primary.doggerBlueBlue[101]}>
           <Sidebar />
         </GridItem>
         <GridItem
           area={"main"}
-          pl="2"
+          paddingLeft="2"
           border="1px solid red"
           borderColor="gray.500"
         >
           <Outlet />
         </GridItem>
-        <GridItem pl="2" area={"footer"} border="1px solid black">
+        <GridItem paddingLeft="2" area={"footer"} border="1px solid black">
           <Footer />
         </GridItem>
       </Grid>

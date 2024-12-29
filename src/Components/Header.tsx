@@ -23,22 +23,22 @@ export const Header = () => {
   return (
     <>
       <Grid templateColumns="repeat(7, 1fr)">
-        <GridItem colSpan={1} h="4rem">
-          <Flex mt="25px" ml="10px">
+        <GridItem colSpan={1} height="4rem">
+          <Flex marginTop="25px" marginLeft="10px">
             <Icon>
               <TfiAlignRight />
             </Icon>
           </Flex>
         </GridItem>
-        <GridItem colStart={4} colSpan={4} h="4em">
+        <GridItem colStart={4} colSpan={4} height="4em">
           <Flex
             align="center"
             gap="4"
             justify="space-around"
-            mt="12px"
-            mr="120px"
+            marginTop="12px"
+            marginRight="120px"
           >
-            <SelectRoot collection={frameworks} size="sm" width="140px">
+            <SelectRoot>
               <SelectTrigger>
                 <SelectValueText placeholder="Français" />
               </SelectTrigger>
@@ -54,7 +54,7 @@ export const Header = () => {
               <LuSearch />
             </IconButton>
             <Text>Username </Text>
-            <Button colorPalette="teal" variant="outline">
+            <Button colorPalette="teal">
               Deconnexion <RiArrowRightLine />
             </Button>
           </Flex>
