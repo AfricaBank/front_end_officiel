@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { SingleStep } from "./SingleStep";
-import { colors } from "../../customTheme/colorTheme";
+import { colors } from "../../customIcons/colorTheme";
 
 export const StepperComponent = () => {
   return (

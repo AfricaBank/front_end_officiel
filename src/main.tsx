@@ -7,8 +7,7 @@ import { Dashboard } from "./pages/Dashboard.tsx";
 import { Gestionroles } from "./pages/Gestionroles.tsx";
 import { Tachesactives } from "./pages/Tachesactives.tsx";
 import { Gestiondossiers } from "./pages/Gestiondossiers.tsx";
-import { Provider } from "./Components/ui/provider.tsx";
-import { ChakraProvider, defaultSystem } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { system } from "./theme.ts";
 
 const router = createBrowserRouter([

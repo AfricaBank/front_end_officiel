@@ -1,7 +1,5 @@
-
-import {CheckboxProps} from "../../ui/checkbox.tsx";
-import { Checkbox } from "@/components/ui/checkbox";
-
+import { CheckboxProps } from "../../ui/checkbox.tsx";
+import { Checkbox } from "../../ui/checkbox.tsx";
 
 interface CustomCheckboxProps extends CheckboxProps {
   label: string;

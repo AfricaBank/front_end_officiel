@@ -1,7 +1,6 @@
 import { Grid, GridItem, Box } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 import { Header } from "../Components/Header";
-import { colors } from "../customTheme/colorTheme";
 import { Footer } from "../Components/Footer";
 import Sidebar from "../Components/Sidebar";
 
@@ -32,7 +31,7 @@ export const RootLayout = () => {
         >
           <Header />
         </GridItem>
-        <GridItem area={"nav"} background={colors.primary.doggerBlueBlue[101]}>
+        <GridItem area={"nav"} background="primary.dogerBlue.101">
           <Sidebar />
         </GridItem>
         <GridItem
