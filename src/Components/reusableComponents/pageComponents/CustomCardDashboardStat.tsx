@@ -1,6 +1,6 @@
 import { colors } from "../../customIcons/colorTheme";
 import { Flex, Text, Box, Icon, Spacer } from "@chakra-ui/react";
-import { icons } from "../../customIcons/iconStyle";
+import { icons } from "../../../customIcons/iconStyle";
 export const CustomCardDashboardStat = () => {
   return (
     <>

@@ -1,12 +1,9 @@
-import {Box} from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
-export const TableauGestionDossier=
-() => {
-    return (
-        <>
-            <Box>
-
-            </Box>
-        </>
-    );
+export const TableauGestionDossier = () => {
+  return (
+    <>
+      <Box></Box>
+    </>
+  );
 };
